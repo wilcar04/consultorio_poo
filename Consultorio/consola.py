@@ -33,6 +33,8 @@ class UIConsola:
             accion = self.opciones.get(opcion)
             if accion is not None:
                 accion()
+                if int(opcion) == 5:
+                    break
             else:
                 print(f"ERROR: {opcion} no es una opción válida")
 
@@ -96,5 +98,4 @@ class UIConsola:
 
     def salir(self):
         print("\n MUCHAS GRACIAS POR USAR LA APLICACIÓN")
-        sys.exit(0)
 
